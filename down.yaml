@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Remove act
+    become: yes
+    ansible.builtin.file:
+      path: bin/act
+      state: absent

@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+  - name: install act
+    ansible.builtin.shell: curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
+    args:
+      creates: bin/act
